@@ -1,75 +1,63 @@
-import UIKit
+import Foundation
 
-var firstNumber = 12
-let secondNumber = 4
+let count = 1...10
 
-let sum = firstNumber + secondNumber
-let sub = firstNumber - secondNumber
-
-let mult = firstNumber * secondNumber
-let div = firstNumber / secondNumber
-
-let remainder = 13%firstNumber
-
-
-let secondName = "Joao"
-var name = "Jose " + secondName
-var array1 = [1,2]
-let array2 = [3,4]
-let arra3 = array1 + array2
-
-firstNumber += 1
-name += " Silva"
-
-firstNumber == secondNumber
-firstNumber != secondNumber
-
-firstNumber < secondNumber
-firstNumber >= secondNumber
-
-secondName <= name
-
-if firstNumber > secondNumber {
-    print("First bigger")
-} else if firstNumber == secondNumber {
-    print("Equals")
-} else {
-    print("Second bigger")
+for number in count {
+    print("Number is \(number)")
 }
 
-if firstNumber > secondNumber && secondName == "Joao" {
-    print("Multiple condition true")
+let array = ["A", "B", "C", "D"]
+
+for letter in array {
+    print(letter)
 }
 
-if firstNumber > secondNumber || secondName == "Joao" {
-    print("One or both conditions are true")
+for _ in 0..<5 {
+    print("For loop 5 times")
 }
 
+var number = 1
 
-print(firstNumber > secondNumber ? firstNumber : secondNumber)
-
-let weather = "sunny"
-
-switch weather {
-case "sunny":
-    print("Sunny today =D")
-default:
-    print("what is the weather today? =(")
+while number < 10 {
+    print(number)
+    number += 1
 }
 
-switch weather {
-case "sunny":
-    print("Sunny today =D")
-    fallthrough
-default:
-    print("Enjoy your day!!")
+print("While end")
+
+number = 1
+
+repeat {
+    print(number)
+    number += 2
+} while number < 10
+
+
+var countDown = 10
+
+while countDown > 0 {
+    print(countDown)
+    
+    if countDown == 4 {
+        print("Stop at 4 value")
+         break
+    }
+    countDown -= 1
 }
 
-let score = 69
+outerLoop: for i in 0...10 {
+    for j in 0...10 {
+        let mult = i*j
+        if mult == 50 {
+            print("50 here and stop!")
+            break outerLoop
+        }
+    }
+}
 
-switch score {
-case 0..<70:
-    print("We have a problem here!!")
-default:
-    print("Nice score")
+for i in 0...10 {
+    if i%2 == 1 {
+        continue
+    }
+    print("Number \(i)")
 }
