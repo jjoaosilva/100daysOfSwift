@@ -1,51 +1,75 @@
 import UIKit
 
-let joao = "Joao"
-let github = "jjoaosilva"
+var firstNumber = 12
+let secondNumber = 4
 
-let array: [String] = [joao, github, "this is my data"]
+let sum = firstNumber + secondNumber
+let sub = firstNumber - secondNumber
+
+let mult = firstNumber * secondNumber
+let div = firstNumber / secondNumber
+
+let remainder = 13%firstNumber
 
 
-let mySet = Set([joao, github])
+let secondName = "Joao"
+var name = "Jose " + secondName
+var array1 = [1,2]
+let array2 = [3,4]
+let arra3 = array1 + array2
 
-var meLikeTuple = (name: joao, github: github)
+firstNumber += 1
+name += " Silva"
 
-let myDictionary: [String: String] = [
-    "name": joao,
-    "github": github
-]
+firstNumber == secondNumber
+firstNumber != secondNumber
 
-print(myDictionary["name"])
-print(myDictionary["favoriteFood", default: "Chocolate"])
+firstNumber < secondNumber
+firstNumber >= secondNumber
 
-let emptyArray1 = [String]()
-let emptyArray2 = Array<Int>()
+secondName <= name
 
-let emptyDictionary1 = [String:String]()
-let emptyDictionary2 = Dictionary<Int, Int>()
-
-let empitySet = Set<String>()
-
-enum Result {
-    case success
-    case failure
+if firstNumber > secondNumber {
+    print("First bigger")
+} else if firstNumber == secondNumber {
+    print("Equals")
+} else {
+    print("Second bigger")
 }
 
-let result = Result.success
-
-enum Activity { // associated values
-    case bored
-    case running(destination: String)
+if firstNumber > secondNumber && secondName == "Joao" {
+    print("Multiple condition true")
 }
 
-let firstActivity = Activity.running(destination: "Home")
-let secondActivity = Activity.running(destination: "Gym")
-
-enum Planets: Int { // raw values
-    case mercury = 1
-    case venus
-    case earth
-    case mars
+if firstNumber > secondNumber || secondName == "Joao" {
+    print("One or both conditions are true")
 }
 
-let earth = Planets.init(rawValue: 3)
+
+print(firstNumber > secondNumber ? firstNumber : secondNumber)
+
+let weather = "sunny"
+
+switch weather {
+case "sunny":
+    print("Sunny today =D")
+default:
+    print("what is the weather today? =(")
+}
+
+switch weather {
+case "sunny":
+    print("Sunny today =D")
+    fallthrough
+default:
+    print("Enjoy your day!!")
+}
+
+let score = 69
+
+switch score {
+case 0..<70:
+    print("We have a problem here!!")
+default:
+    print("Nice score")
+}
